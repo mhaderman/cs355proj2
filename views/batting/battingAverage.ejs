@@ -1,0 +1,19 @@
+<p> Noma Club Baseball </p>
+<p> Batting Average </p>
+
+<table border="1">
+    <thead>
+        <tr>
+            <td>Avg</td>
+        </tr>
+    </thead>
+    <tbody>
+    <% response.forEach(function(i){%>
+    <tr>
+
+        <td><%= i.batting_average%></td>
+    </tr>
+    <% }); %>
+    <a href="/batting/add">Add New Batting Stats</a>
+    </tbody>
+</table>

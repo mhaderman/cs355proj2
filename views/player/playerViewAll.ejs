@@ -1,0 +1,49 @@
+<%- include("../includes/header.ejs", {title: "Players"}); %>
+
+<h1>NOMA Baseball Club</h1>
+<h3> PLAYERS:</h3>
+Navigation
+<br/>
+<a href="/about/all">About</a>
+<a href="/batting/all">Batting</a>
+<a href="/fielding/all">Fielding</a>
+<a href="/pitching/all">Pitching</a>
+<a href="/game/all">Games</a>
+<br/>
+<br>
+<table border="3">
+    <thead>
+        <tr>
+            <td>Num</td>
+            <td>Position(s)</td>
+            <td>First</td>
+            <td>Last</td>
+            <td>Height</td>
+            <td>Weight</td>
+            <td>Year</td>
+            <td>Bats</td>
+            <td>Throws</td>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% response.forEach(function(i){%>
+        <tr>
+            <td><a href="/player/viewBy/<%= i.player_num%>"> <%= i.player_num %></a></td>
+            <td><%= i.position%></td>
+            <td><%= i.first_name %></td>
+            <td><%= i.last_name %></td>
+            <td><%= i.height%></td>
+            <td><%= i.weight%></td>
+            <td><%= i.year%></td>
+            <td><%= i.batting_hand%></td>
+            <td><%= i.throwing_hand%></td>
+
+        </tr>
+        <% }); %>
+    </tbody>
+
+
+</table>
+<td><a href="/player/createForm/">Add New Player</a></td>
+

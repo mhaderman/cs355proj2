@@ -1,0 +1,49 @@
+<%- include("../includes/header.ejs", {title: "Add"}); %>
+
+<h1>NOMA Baseball Club</h1>
+<h3> BATTING : </h3>
+<p>Add new Batting stats: </p>
+    <form action="/batting/insert" method="get">
+        playerNum
+        <input id="player_num" type="text" name='player_num'>
+        <br>
+        Game
+        <input id="game_id" type="text" name="game_id">
+        <br>
+        PA
+        <input id="plate_apperances" type="text" name='plate_appearances'>
+        <br>
+        AB
+        <input id="at_bats" type="text" name='at_bats'>
+        <br>
+        H
+        <input id="hits" type="text" name='batting[hits]'>
+        <br>
+        Singles
+        <input id="singles" type="text" name="singles">
+        <br>
+        Doubles
+        <input id="doubles" type="text" name="doubles">
+        <br>
+        Triples
+        <input id="triples" type="text" name="triples">
+        <br>
+        HR
+        <input id="hr" type="text" name='hr'>
+        <br>
+        K
+        <input id="strikeouts" type="text" name='strikeouts'>
+        <br>
+        BB
+        <input id="walks" type="text" name='walks'>
+        <br>
+        HBP>
+        <input id="hbp" type="text" name='hbp'>
+        <br>
+        SB
+        <input id="stolen_bases" type="text" name='stolen_bases'>
+        <br/>
+
+        <input type="Submit"/>
+
+    </form>

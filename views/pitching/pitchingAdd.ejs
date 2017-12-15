@@ -1,0 +1,28 @@
+<%- include("../includes/header.ejs", {title: "Add"}); %>
+
+<h1>Add Pitcher Stats</h1>
+<form action="/pitching/insert" method="get">
+    Player Number: <input id="player_num" name="player_num" type="text" />
+    <br />
+    <br />
+    Game
+    <br />
+    <select id="game_id" name="game_id" multiple="multiple">
+        <% for(var i=0; game.length > i; i++ ) { %>
+        <option value="<%= game[i].game_id %>"><%= game[i].opponent + ', ' + game[i].date %></option>
+        <% } %>
+    </select>
+    IP: <input
+
+    <!-- Initialize the multiselect plugin: -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#game_id').multiselect();
+        });
+    </script>
+
+
+    <br />
+    <input type="submit" />
+
+</form>

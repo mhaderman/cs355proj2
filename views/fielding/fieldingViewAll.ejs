@@ -1,0 +1,40 @@
+<%- include("../includes/header.ejs", {title: "Fielding"}); %>
+
+<h1>NOMA Baseball Club</h1>
+<h3> Fielding : </h3>
+<br/>
+Navigation
+<a href="/about/all">About</a>
+<a href="/player/all">Players</a>
+<a href="/batting/all">Batting</a>
+<a href="/pitching/all">Pitching</a>
+<a href="/game/all">Game</a>
+<br/>
+
+<table border="1">
+    <thead>
+    <tr>
+        <td>Number</td>
+        <td>GameID</td>
+        <td>TC</td>
+        <td>PO</td>
+        <td>E</td>
+        <td>Assist</td>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% response.forEach(function(i){%>
+    <tr>
+        <td><%= i.player_num %></td>
+        <td><%= i.game_id %></td>
+        <td><%= i.total_chances %></td>
+        <td><%= i.putouts %></td>
+        <td><%= i.errors %></td>
+        <td><%= i.assists %></td>
+
+    </tr>
+    <% }); %>
+    <a href="/fielding/Add">Add New Fielding Stats</a>
+    </tbody>
+</table>

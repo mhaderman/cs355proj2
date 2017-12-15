@@ -1,0 +1,36 @@
+<%- include("../includes/header.ejs", {title: "Games"}); %>
+
+<h1>NOMA Baseball Club</h1>
+<h3> GAMES : </h3>
+<br/>
+Navigation
+<a href="/about/all">About</a>
+<a href="/player/all">Players</a>
+<a href="/batting/all">Batting</a>
+<a href="/fielding/all">Fielding</a>
+<a href="/pitching/all">Pitching</a>
+<br/>
+<table border="1">
+    <thead>
+    <tr>
+        <td>gameID</td>
+        <td>Date</td>
+        <td>Opponent</td>
+        <td>W/L</td>
+        <td>Score</td>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% response.forEach(function(i){%>
+    <tr>
+        <td><%= i.game_id %></td>
+        <td><%= i.date %></td>
+        <td><%= i.opponent %></td>
+        <td><%= i.win_lose %></td>
+        <td><%= i.score %></td>
+    </tr>
+    <% }); %>
+    </tbody>
+    <a href="/game/createForm/">Add New Game</a>
+</table>

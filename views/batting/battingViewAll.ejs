@@ -1,0 +1,56 @@
+<%- include("../includes/header.ejs", {title: "Batting"}); %>
+
+<h1>NOMA Baseball Club</h1>
+<h3> BATTING : </h3>
+<br/>
+Navigation
+<a href="/about/all">About</a>
+<a href="/player/all">Players</a>
+<a href="/pitching/all">Pitching</a>
+<a href="/fielding/all">Fielding</a>
+<a href="/game/all">Game</a>
+<br/>
+<br/>
+<a href="/batting/average">View Top Batting Average</a>
+<table border="1">
+    <thead>
+    <tr>
+        <td>Number</td>
+        <td>PA</td>
+        <td>AB</td>
+        <td>Hits</td>
+        <td>1B</td>
+        <td>2B</td>
+        <td>3B</td>
+        <td>HR</td>
+        <td>K</td>
+        <td>BB</td>
+        <td>HBP</td>
+        <td>SB</td>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% response.forEach(function(i){%>
+    <tr>
+        <td><a href="/batting/viewBy/<%= i.player_num%>"> <%= i.player_num %></a></td>
+        <td><%= i.plate_apperances %></td>
+        <td><%= i.at_bats %></td>
+        <td><%= i.hits %></td>
+        <td><%= i.singles %></td>
+        <td><%= i.doubles %></td>
+        <td><%= i.triples%></td>
+        <td><%= i.hr %></td>
+        <td><%= i.strikeouts%></td>
+        <td><%= i.walks %></td>
+        <td><%= i.hbp %></td>
+        <td><%= i.stolen_bases%></td>
+
+    </tr>
+    <% }); %>
+    <a href="/batting/createForm">Add New Batting Stats</a>
+    <br>
+
+    </tbody>
+    <p></p>
+</table>

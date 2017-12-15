@@ -1,0 +1,25 @@
+<%- include("../includes/header.ejs", {title: "Add"}); %>
+
+<p>Add new Fielding Stats: playerNUM</p>
+<form action="/fielding/insert" method="POST">
+    <p>playerNum</p>
+    <input type="text" name='fielding[player_num]'>
+    <br>
+    <p>game_id</p>
+    <input type="text" name='fielding[game_id]'>
+    <br>
+    <p>TC</P>
+    <input type="text" name='fielding[total_chances]'>
+    <br>
+    <p>PO</p>
+    <input type="text" name='fielding[putouts]'>
+    <br>
+    <p>E</p>
+    <input type="text" name='fielding[errors]'>
+    <br>
+    <p>Assist</p>
+    <input type="text" name='fielding[assists]'>
+
+    <button type="Submit">submit</button>
+
+</form>

@@ -1,0 +1,44 @@
+
+<h1>Pitching: </h1>
+
+<br />
+
+<table border="1">
+    <thead>
+    <tr>
+        <td>NUM</td>
+        <td>GameID</td>
+        <td>First</td>
+        <td>Last</td>
+        <td>IP</td>
+        <td>H</td>
+        <td>ER</td>
+        <td>BB</td>
+        <td>K</td>
+        <td>EBH</td>
+        <td>W</td>
+        <td>L</td>
+    </tr>
+    </thead>
+    <tbody>
+    <th>Num</th>
+    <% for(var i=0; pitching.length > i; i++ ) { %>
+    <tr>
+        <td><a href="/player/viewBy/<%= pitching[i].player_num%>"><%= pitching[i].player_num %></a></td>
+    </tr>
+    <% } %>
+    <th>GameID</th>
+    <% for(var i=0; pitching.length > i; i++ ) { %>
+    <tr>
+        <td><a href="/player/viewBy/<%= pitching[i].game_id%>"><%= pitching[i].game_id %></a></td>
+    </tr>
+    <% } %>
+    <th>First</th>
+    <% for(var i=0; player.length > i; i++ ) { %>
+    <tr>
+        <td><a href="/player/viewBy/<%= player[i].first_name%>"><%= player[i].first_name %></a></td>
+    </tr>
+    <% } %>
+    </tbody>
+</table>
+<br/>

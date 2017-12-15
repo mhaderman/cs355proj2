@@ -1,0 +1,27 @@
+<p> Noma Club Baseball </p>
+<p> View By Player </p>
+
+<table border="1">
+    <thead>
+    <tr>
+        <td>First</td>
+        <td>Last</td>
+        <td>AB</td>
+        <td>H</td>
+        <td>K</td>
+    </tr>
+    </thead>
+    <tbody>
+    <% response.forEach(function(i){%>
+    <tr>
+
+        <td><%= i.first_name %></td>
+        <td><%= i.last_name %></td>
+        <td><%= i.at_bats %></td>
+        <td><%= i.hits %></td>
+        <td><%= i.strikeouts %></td>
+    </tr>
+    <% }); %>
+    <a href="/batting/add">Add New Batting Stats</a>
+    </tbody>
+</table>

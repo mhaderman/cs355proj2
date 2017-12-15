@@ -1,0 +1,27 @@
+<%- include("../includes/header.ejs", {title: "Add"}); %>
+
+<p>Add new Player:</p>
+<a href="/player/all">Players</a>
+<form action="/player/insert" method="GET">
+
+    <p>playerNum</p><input id="player_num" type="text" name='player_num'>
+    <br>
+    <p>position</p><input id="position" type="text" name='position'>
+    <br>
+    <p>first_name</P><input id="first_name" type="text" name='first_name'>
+    <br>
+    <p>last_name</p><input id="last_name" type="text" name='last_name'>
+    <br>
+    <p>height</p><input id="height" type="text" name='height'>
+    <br>
+    <p>weight</p><input id="weight" type="text" name='weight'>
+    <br>
+    <p>year</p><input id="year" type="text" name='year'>
+    <br>
+    <p>batting_hand</p><input id="batting_hand" type="text" name='batting_hand'>
+    <br>
+    <p>throwing_hand</p><input id="throwing_hand" type="text" name='throwing_hand'>
+
+    <button type="Submit">submit</button>
+
+</form>

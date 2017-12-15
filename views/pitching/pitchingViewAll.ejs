@@ -1,0 +1,48 @@
+<%- include("../includes/header.ejs", {title: "Pitching"}); %>
+
+<h1>NOMA Baseball Club</h1>
+<h3> PITCHING : </h3>
+Navigation
+<br/>
+<a href="/about/all">About</a>
+<a href="/player/all">Players</a>
+<a href="/batting/all">Batting</a>
+<a href="/fielding/all">Fielding</a>
+<a href="/game/all">Games</a>
+<br/>
+<p></p>
+<br>
+<table border="1">
+    <thead>
+    <tr>
+        <td>NUM</td>
+        <td>GameID</td>
+        <td>IP</td>
+        <td>H</td>
+        <td>ER</td>
+        <td>BB</td>
+        <td>K</td>
+        <td>EBH</td>
+        <td>W</td>
+        <td>L</td>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% pitching.forEach(function(i){%>
+    <tr>
+        <td><%= i.player_num %></td>
+        <td><%= i.game_id%></td>
+        <td><%= i.innings_pitched%> </td>
+        <td><%= i.hits %></td>
+        <td><%= i.earned_runs %></td>
+        <td><%= i.walks%></td>
+        <td><%= i.strikeouts %></td>
+        <td><%= i.extra_base_hits%></td>
+        <td><%= i.wins %></td>
+        <td><%= i.loses %></td>
+    </tr>
+    <% }); %>
+    </tbody>
+    <a href="/pitching/insert">Add New Pitching Stats</a>
+</table>
